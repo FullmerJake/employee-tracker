@@ -98,7 +98,7 @@ function init() {
     // Need to create an if function get answers in specific order
 
     // initialPrompt(),
-    // employeeData(),
+    // employeeData()
     // departmentData(),
     // roleData()
 
