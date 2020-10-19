@@ -8,7 +8,7 @@ const connectionProperties = {
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "",
+    password: "D1g1m0n0",
     database: "employees"
 }
 
@@ -48,7 +48,8 @@ function mainMenu(){
         "Delete employee",
         "Delete role",
         "Delete department",
-        "View department budgets"
+        "View department budgets",
+        "Quit"
       ]
     })
     .then((answer) => {
@@ -58,19 +59,15 @@ function mainMenu(){
             case "View all employees":
                 viewAllEmp();
                 break;
-
             case "View all employees by department":
                 viewAllEmpByDept();
                 break;
-
             case "View all employees by role":
                 viewAllEmpByRole();
                 break;
-
             case "Add employee":
                 addEmp();
                 break;
-
             case "Add department":
                 addDept();
                 break;
@@ -98,6 +95,10 @@ function mainMenu(){
             case "Delete department":
                 deleteDept();
                 break;
+            case "Quit":
+                quitApp();
+                break;
+
         }
     });
 }
@@ -905,4 +906,8 @@ function viewDeptBudget(){
         // back to main menu
         mainMenu();
     });
+}
+
+function quitApp(){
+    
 }
