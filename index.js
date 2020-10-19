@@ -57,7 +57,7 @@ function mainMenu(){
         // Switch case depending on user option
         switch (answer.action) {
             case "View all employees":
-                viewAllEmp();
+                viewAllEmployees();
                 break;
             case "View all employees by department":
                 viewAllEmpByDept();
@@ -66,25 +66,25 @@ function mainMenu(){
                 viewAllEmpByRole();
                 break;
             case "Add employee":
-                addEmp();
+                addEmployee();
                 break;
             case "Add department":
-                addDept();
+                addDepartment();
                 break;
             case "Add role":
                 addRole();
                 break;
             case "Update employee role":
-                updateEmpRole();
+                updateEmployeeRole();
                 break;
             case "Update employee manager":
-                updateEmpMngr();
+                updateEmployeeMngr();
                 break;
             case "View all employees by manager":
                 viewAllEmpByMngr();
                 break;
             case "Delete employee":
-                deleteEmp();
+                deleteEmployee();
                 break;
             case "View department budgets":
                 viewDeptBudget();
@@ -93,7 +93,7 @@ function mainMenu(){
                 deleteRole();
                 break;
             case "Delete department":
-                deleteDept();
+                deleteDepartment();
                 break;
             case "Quit":
                 quitApp();
@@ -104,7 +104,7 @@ function mainMenu(){
 }
 
 // View all employees 
-function viewAllEmp(){
+function viewAllEmployees(){
 
     // Query to view all employees
     let query = "SELECT e.id, e.first_name, e.last_name, role.title, department.name AS department, role.salary, concat(m.first_name, ' ' ,  m.last_name) AS manager FROM employee e LEFT JOIN employee m ON e.manager_id = m.id INNER JOIN role ON e.role_id = role.id INNER JOIN department ON role.department_id = department.id ORDER BY ID ASC";
@@ -213,7 +213,7 @@ function viewAllEmpByRole(){
 }
 
 // Add employee
-function addEmp(){
+function addEmployee(){
 
     // Create two global array to hold 
     let roleArr = [];
@@ -394,7 +394,7 @@ function addRole(){
 }
 
 // Add Department
-function addDept(){
+function addDepartment(){
 
     inquirer.prompt({
 
@@ -415,7 +415,7 @@ function addDept(){
 }
 
 // Update Employee Role
-function updateEmpRole(){
+function updateEmployeeRole(){
 
     // create employee and role array
     let employeeArr = [];
@@ -494,7 +494,7 @@ function updateEmpRole(){
 }
 
 // Update employee manager
-function updateEmpMngr(){
+function updateEmployeeMngr(){
 
     // set global array for employees
     let employeeArr = [];
@@ -626,7 +626,7 @@ function viewAllEmpByMngr(){
 }
 
 // Delete employee
-function deleteEmp(){
+function deleteEmployee(){
 
     // Create global employee array
     let employeeArr = [];
@@ -777,7 +777,7 @@ function deleteRole(){
 }
 
 // Delete Department
-function deleteDept(){
+function deleteDepartment(){
 
     // department array
     let deptArr = [];
@@ -909,5 +909,5 @@ function viewDeptBudget(){
 }
 
 function quitApp(){
-    
+    return;
 }
