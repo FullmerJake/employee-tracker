@@ -20,12 +20,12 @@ VALUES
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
     ('John', 'Smith', 1, null),
-    ('Sarah', 'Connor', 2, null),
+    ('Sarah', 'Connor', 2, 1),
     ('Horus', 'Lupercal', 3, null),
-    ('Angron', 'Angry', 4, null),
+    ('Angron', 'Angry', 4, 3),
     ('Fulgrim', 'Fall', 5, null),
-    ('Erebos', 'Worst', 6, null),
+    ('Erebos', 'Worst', 6, 5),
     ('Kharn', 'Betrayer', 7, null),
-    ('Gork', 'Kunnin', 8, null),
+    ('Gork', 'Kunnin', 8, 7),
     ('Mork', 'Brutal', 2, null),
-    ('Emperor', 'OfMankind', 4, null);
+    ('Emperor', 'OfMankind', 4, 3);
