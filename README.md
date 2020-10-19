@@ -26,7 +26,8 @@
   Right now the only way to exit the application is through closing the terminal. A function to allow the user to quit within the terminal would be a great help!
 
   ## Tests
-  See Video
+  See Link
+  https://drive.google.com/file/d/1ehnmtTiETsM8u-_VzH4mFw03wIkfqZkF/view?usp=sharing
   
   ## Contact
   Learn more about the owner of this project by visiting their Github Profile: <a href=https://github.com/FullmerJake>FullmerJake</a>
